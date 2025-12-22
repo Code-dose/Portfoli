@@ -79,4 +79,59 @@ nav a:hover{
   box-shadow:0 0 15px rgba(56,189,248,0.4);
 }
 
+.resume-card{
+  margin-top:40px;
+  background:#020617;
+  padding:30px;
+  border-radius:18px;
+  width:300px;
+  text-align:center;
+  animation:fadeUp 1s ease;
+}
+
+.resume-card i{
+  font-size:48px;
+  color:#ef4444;
+  margin-bottom:10px;
+}
+
+.resume-card h3{
+  margin:10px 0;
+  font-size:22px;
+}
+
+.resume-card p{
+  font-size:14px;
+  color:#94a3b8;
+}
+
+.resume-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 22px;
+  background:#38bdf8;
+  color:#020617;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.resume-btn:hover{
+  background:#0ea5e9;
+  transform:scale(1.08);
+}
+
+/* Animation */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
 
