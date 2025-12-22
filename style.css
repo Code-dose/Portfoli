@@ -1,19 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root{
   --primary:#38bdf8;
-  --secondary:#d946ef;
-  --dark:#020617;
-  --card:#0f172a;
+  --secondary:#a855f7;
+  --bg-dark:#020617;
+  --bg-card:#0f172a;
   --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
+  font-family:'Inter', sans-serif;
   background:linear-gradient(135deg,#020617,#0f172a);
   color:var(--text);
   text-align:center;
+  -webkit-font-smoothing:antialiased;
 }
 
 /* ================= HEADER ================= */
@@ -23,21 +30,23 @@ header{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:15px;
+  gap:16px;
 }
 
 /* ================= NAV ================= */
 nav a{
-  color:white;
+  color:var(--text);
   margin:10px;
-  padding:8px 16px;
-  border-radius:8px;
-  transition:0.3s;
+  padding:8px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:500;
+  transition:all 0.3s ease;
 }
 
 nav a:hover{
   background:var(--primary);
-  color:black;
+  color:#000;
 }
 
 /* ================= HERO ================= */
@@ -45,12 +54,19 @@ nav a:hover{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:60px;
+  padding:60px 8%;
   min-height:90vh;
 }
 
+.hero-text{
+  text-align:left;
+  animation:slideUp 1.2s ease forwards;
+  opacity:0;
+}
+
 .hero-text h1{
-  font-size:48px;
+  font-size:52px;
+  font-weight:700;
 }
 
 .hero-text h1 span{
@@ -59,17 +75,31 @@ nav a:hover{
 
 .hero-text p{
   font-size:20px;
-  opacity:0.9;
+  color:var(--muted);
   margin:20px 0;
-}
-
-.hero-text{
-  animation:fadeIn 1.5s ease;
+  line-height:1.6;
 }
 
 .hero-img img{
   width:420px;
   animation:float 4s ease-in-out infinite;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+  display:inline-block;
+  padding:12px 26px;
+  background:var(--primary);
+  color:#000;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px) scale(1.05);
+  background:#0ea5e9;
 }
 
 /* ================= PROJECTS ================= */
@@ -78,118 +108,113 @@ nav a:hover{
   flex-wrap:wrap;
   justify-content:center;
   gap:25px;
-  margin:40px;
+  margin:40px 0;
 }
 
 .project-card{
-  background:var(--card);
+  background:var(--bg-card);
   width:260px;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.4);
-  transition:0.3s;
+  padding:22px;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.45);
+  transition:all 0.35s ease;
 }
 
 .project-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.6);
+  transform:translateY(-12px);
 }
 
 .project-card h3{
   color:var(--secondary);
+  margin-bottom:10px;
+}
+
+.project-card p{
+  color:var(--muted);
+  font-size:15px;
 }
 
 .project-card a{
-  text-decoration:none;
-  color:black;
-  background:var(--primary);
-  padding:8px 15px;
-  border-radius:6px;
   display:inline-block;
-  margin-top:10px;
+  margin-top:14px;
+  padding:8px 16px;
+  background:var(--primary);
+  color:#000;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:500;
 }
 
-/* ================= ABOUT / CONTACT ================= */
+/* ================= ABOUT / CONTACT / SKILLS ================= */
 .about-section,
-.contact-section{
+.contact-section,
+.skills-section{
   display:flex;
+  flex-wrap:wrap;
   justify-content:center;
-  align-items:center;
-  gap:40px;
-  padding:40px;
+  gap:30px;
+  padding:50px 8%;
 }
 
 .about-card,
 .contact-card,
 .skills-card{
-  background:var(--card);
+  background:var(--bg-card);
   padding:30px;
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+  border-radius:18px;
+  width:320px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+
+.about-card:hover,
+.skills-card:hover{
+  transform:translateY(-8px);
 }
 
 .about-card h3,
 .contact-card h3,
 .skills-card h3{
   color:var(--secondary);
-}
-
-/* ================= SKILLS ================= */
-.skills-section{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:25px;
-  padding:40px;
-}
-
-.skills-card{
-  width:320px;
-  transition:0.3s;
-}
-
-.skills-card:hover{
-  transform:translateY(-8px);
+  margin-bottom:14px;
 }
 
 /* ================= GALLERY ================= */
 .gallery{
   display:flex;
+  flex-wrap:wrap;
   justify-content:center;
   gap:15px;
-  margin:20px;
+  margin:30px;
 }
 
 .gallery img{
-  width:280px;
-  height:220px;
-  border-radius:12px;
+  width:260px;
+  height:200px;
+  object-fit:cover;
+  border-radius:14px;
   transition:0.3s;
 }
 
 .gallery img:hover{
-  transform:scale(1.05);
-}
-
-/* ================= BUTTON ================= */
-.btn{
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#9333ea;
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
 /* ================= ANIMATIONS ================= */
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
+@keyframes slideUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 @keyframes float{
   0%{transform:translateY(0);}
-  50%{transform:translateY(-20px);}
+  50%{transform:translateY(-18px);}
   100%{transform:translateY(0);}
 }
 
@@ -197,6 +222,10 @@ nav a:hover{
 @media(max-width:768px){
   .hero{
     flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-text{
     text-align:center;
   }
 
