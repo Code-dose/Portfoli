@@ -1,9 +1,11 @@
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#0f172a;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#020617,#0f172a);
   color:#e5e7eb;
+  line-height:1.7;
 }
+
 
 header{
   background:#020617;
@@ -224,6 +226,77 @@ section{
 .card img{
   margin:auto;
   display:block;
+}
+
+/* ================= PREMIUM SPACING ================= */
+section{
+  padding:80px 20px;
+}
+
+section h1,
+section h2{
+  margin-bottom:20px;
+  letter-spacing:0.5px;
+}
+
+section p{
+  max-width:700px;
+  margin:0 auto;
+  color:#cbd5f5;
+  font-size:17px;
+}
+/* ================= PREMIUM CARDS ================= */
+.card,
+.skill-card,
+.project-card,
+.resume-card{
+  background:rgba(2,6,23,0.85);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(148,163,184,0.15);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+/* ================= FADE IN ANIMATION ================= */
+section,
+.card,
+.skill-card,
+.project-card,
+.resume-card{
+  animation:fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+/* ================= HERO PREMIUM ================= */
+.hero h1{
+  font-size:52px;
+  background:linear-gradient(90deg,#38bdf8,#a5f3fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  font-size:18px;
+  margin-top:10px;
+}
+/* ================= GALLERY POLISH ================= */
+.card img{
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.5);
+}
+.resume-btn{
+  box-shadow:0 8px 20px rgba(56,189,248,0.4);
+}
+
+.resume-btn:hover{
+  box-shadow:0 12px 30px rgba(56,189,248,0.6);
 }
 
 
