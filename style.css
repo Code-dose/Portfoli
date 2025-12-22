@@ -1,43 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anupriya | Home</title>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+:root{
+  --primary:#38bdf8;
+  --secondary:#a855f7;
+  --bg-dark:#020617;
+  --bg-card:#0f172a;
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+}
 
-<body>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-<header>
-  <h1 class="site-name">Anupriya</h1>
-  <p class="tagline">Future GenAI Engineer</p>
+body{
+  font-family:'Inter', sans-serif;
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:var(--text);
+  text-align:center;
+  line-height:1.7;
+}
 
-  <nav>
-    <a href="index.html" class="active"><i class="fas fa-house"></i> Home</a>
-    <a href="projects.html"><i class="fas fa-code"></i> Projects</a>
-    <a href="skills.html"><i class="fas fa-laptop-code"></i> Skills</a>
-    <a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
-    <a href="about.html"><i class="fas fa-user"></i> About</a>
-    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-  </nav>
-</header>
+/* ================= HEADER ================= */
+header{
+  padding:40px 0 20px;
+}
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Hello <br> I'm <span>Anupriya</span></h1>
-    <p>Passionate • Dedicated • Curious • Motivated</p>
-    <a href="AResume.pdf" class="btn">Download Resume</a>
-  </div>
+.site-name{
+  font-family:'Playfair Display', serif;
+  font-size:52px;
+  color:var(--primary);
+}
 
-  <div class="hero-img">
-    <img src="hero.png" alt="Profile Image">
-  </div>
-</section>
+.tagline{
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:20px;
+}
 
-</body>
-</html>
+/* ================= NAVBAR ================= */
+nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+nav a{
+  color:#ffffff;
+  font-size:17px;
+  font-weight:600;
+  padding:10px 18px;
+  border-radius:12px;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:all 0.3s ease;
+  background:rgba(255,255,255,0.05);
+}
+
+nav a:hover{
+  background:var(--primary);
+  color:#000;
+  transform:translateY(-2px);
+}
+
+/* Active page (Home visible & bright) */
+nav a.active{
+  background:var(--secondary);
+  color:#fff;
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:60px 8%;
+}
+
+.hero-text{
+  text-align:left;
+}
+
+.hero-text h1{
+  font-family:'Playfair Display', serif;
+  font-size:60px;
+}
+
+.hero-text h1 span{
+  color:var(--primary);
+}
+
+.hero-text p{
+  font-size:20px;
+  color:#cbd5f5;
+  margin-top:15px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 34px;
+  border-radius:30px;
+  background:var(--primary);
+  color:#000;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#0ea5e9;
+  transform:translateY(-4px);
+}
+
+.hero-img img{
+  width:420px;
+  border-radius:20px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-text{
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:42px;
+  }
