@@ -359,5 +359,61 @@ section,
   align-self:center;
 }
 
+/* ================= FANCY SECTION HEADINGS ================= */
+section h2{
+  font-size:36px;
+  margin-bottom:20px;
+  position:relative;
+  display:inline-block;
+  background:linear-gradient(90deg,#38bdf8,#a5f3fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:1px;
+}
+
+section h2::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-8px;
+  width:60%;
+  height:3px;
+  background:linear-gradient(90deg,#38bdf8,#a5f3fc);
+  transform:translateX(-50%);
+  border-radius:5px;
+}
+/* ================= FANCY SECTION HEADINGS ================= */
+section h2{
+  font-size:36px;
+  margin-bottom:20px;
+  position:relative;
+  display:inline-block;
+  background:linear-gradient(90deg,#38bdf8,#a5f3fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:1px;
+}
+
+section h2::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-8px;
+  width:60%;
+  height:3px;
+  background:linear-gradient(90deg,#38bdf8,#a5f3fc);
+  transform:translateX(-50%);
+  border-radius:5px;
+}
+@media (max-width:768px){
+  section h2{
+    font-size:28px;
+  }
+
+  section p{
+    font-size:15px;
+  }
+}
+
 
 
