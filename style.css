@@ -134,4 +134,50 @@ nav a:hover{
   }
 }
 
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
+
+  header{
+    padding:10px 15px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:6px 10px;
+    font-size:14px;
+  }
+
+  .hero{
+    padding:30px 15px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .resume-card{
+    width:100%;
+    max-width:320px;
+    margin:30px auto 0;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .card img{
+    height:160px;
+  }
+
+}
+
 
