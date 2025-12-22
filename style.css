@@ -62,23 +62,27 @@ nav a:hover{
   text-align:left;
   animation:slideUp 1.2s ease forwards;
   opacity:0;
+
 }
 
 .hero-text h1{
-  font-size:52px;
+  font-size:56px;
   font-weight:700;
+  color:#f8fafc;
+  letter-spacing:1px;
 }
+
 
 .hero-text h1 span{
-  color:var(--secondary);
+  color:#38bdf8;
 }
 
+
 .hero-text p{
-  font-size:20px;
-  color:var(--muted);
-  margin:20px 0;
-  line-height:1.6;
+  font-size:18px;
+  color:#cbd5f5;
 }
+
 
 .hero-img img{
   width:420px;
@@ -233,5 +237,9 @@ nav a:hover{
     width:300px;
     margin-top:30px;
   }
+}
+
+a{
+  text-decoration: none !important;
 }
 
