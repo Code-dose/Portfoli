@@ -298,5 +298,33 @@ section,
 .resume-btn:hover{
   box-shadow:0 12px 30px rgba(56,189,248,0.6);
 }
+/* ================= HERO BACKGROUND IMAGE ================= */
+.hero-bg{
+  position:relative;
+  background:url("anupriya.png") no-repeat center;
+  background-size:280px;
+}
+
+.hero-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(2,6,23,0.85);
+  z-index:0;
+}
+
+.hero *{
+  position:relative;
+  z-index:1;
+}
+/* ================= RESUME CENTER FIX ================= */
+.resume-card{
+  margin:40px auto 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
 
 
