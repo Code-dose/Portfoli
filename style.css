@@ -180,4 +180,50 @@ nav a:hover{
 
 }
 
+/* ================= GLOBAL CENTER ALIGN ================= */
+
+/* Header + Navbar center */
+header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+nav{
+  justify-content:center;
+}
+
+/* All sections content center */
+section{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+
+/* Hero already center but safe */
+.hero{
+  align-items:center;
+  text-align:center;
+}
+
+/* Cards grid center */
+.grid{
+  justify-items:center;
+}
+
+/* Individual cards fixed width for consistency */
+.card,
+.skill-card,
+.project-card,
+.resume-card{
+  width:100%;
+  max-width:300px;
+}
+
+/* Gallery images center */
+.card img{
+  margin:auto;
+  display:block;
+}
+
 
