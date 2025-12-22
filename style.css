@@ -35,19 +35,25 @@ header{
 
 /* ================= NAV ================= */
 nav a{
-  color:var(--text);
-  margin:10px;
+  color:#f8fafc;       /* light color for dark background */
+  font-size:18px;      /* bada font */
+  font-weight:600;
+  margin:12px;
   padding:8px 18px;
   border-radius:10px;
   text-decoration:none;
-  font-weight:500;
-  transition:all 0.3s ease;
+  transition: all 0.3s ease;
+  display:flex;
+  align-items:center;
+  gap:6px;             /* icon aur text ke beech space */
 }
 
 nav a:hover{
-  background:var(--primary);
-  color:#000;
+  background: var(--primary);
+  color:black;
+  transform: scale(1.05);
 }
+
 
 /* ================= HERO ================= */
 .hero{
@@ -66,45 +72,48 @@ nav a:hover{
 }
 
 .hero-text h1{
-  font-size:56px;
+  font-size:64px;      /* bada font */
   font-weight:700;
-  color:#f8fafc;
+  color:#f8fafc;       /* light color */
   letter-spacing:1px;
 }
 
-
 .hero-text h1 span{
-  color:#38bdf8;
+  color:var(--primary); /* blue accent */
 }
 
-
 .hero-text p{
-  font-size:18px;
-  color:#cbd5f5;
+  font-size:22px;
+  color:#cbd5f5;       /* soft text for dark bg */
+  line-height:1.6;
+  margin-top:20px;
 }
 
 
 .hero-img img{
   width:420px;
-  animation:float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+  border-radius:16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
+
 
 /* ================= BUTTON ================= */
 .btn{
-  display:inline-block;
-  padding:12px 26px;
-  background:var(--primary);
-  color:#000;
+  font-size:18px;
+  padding:14px 28px;
   border-radius:30px;
+  background: var(--primary);
+  color:#000;
   font-weight:600;
-  text-decoration:none;
-  transition:all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover{
-  transform:translateY(-3px) scale(1.05);
+  transform: translateY(-3px) scale(1.05);
   background:#0ea5e9;
 }
+
 
 /* ================= PROJECTS ================= */
 .projects{
@@ -224,22 +233,28 @@ nav a:hover{
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:768px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
+  nav a{
+    font-size:16px;
+    padding:6px 12px;
   }
 
-  .hero-text{
-    text-align:center;
+  .hero-text h1{
+    font-size:42px;
+  }
+
+  .hero-text p{
+    font-size:18px;
   }
 
   .hero-img img{
     width:300px;
-    margin-top:30px;
+    margin-top:20px;
   }
 }
+
 
 a{
   text-decoration: none !important;
 }
+
 
