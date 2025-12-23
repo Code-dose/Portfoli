@@ -30,12 +30,6 @@ h1,h2,h3{
   color:#38bdf8;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
 .card{
   background:#020617;
   padding:20px;
@@ -45,11 +39,6 @@ h1,h2,h3{
 .card img{
   width:100%;
   border-radius:8px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
 }
 
 .card{
@@ -435,17 +424,6 @@ section h2::after{
   transform:translateY(-8px) scale(1.03);
   box-shadow:0 15px 35px rgba(0,255,255,0.25);
 }
-/* PROJECTS SECTION FIX (PHONE + PC) */
-
-.grid{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:25px;
-  max-width:900px;
-  margin:0 auto;   /* <-- PC me center */
-  padding:20px;
-}
 
 .project-link{
   width:100%;
@@ -502,5 +480,52 @@ section h2::after{
   margin:0 auto;           /* <-- final center force */
 }
 
+/* ================= FINAL PROJECTS CENTER FIX ================= */
+
+.grid{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding:30px 15px;
+  gap:30px;
+  box-sizing:border-box;
+}
+
+.project-link{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  text-decoration:none;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  text-align:center;
+  background:#121212;
+  padding:28px;
+  border-radius:14px;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.35s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.04);
+  box-shadow:0 15px 35px rgba(56,189,248,0.35);
+}
+
+/* Desktop thoda bada */
+@media (min-width:768px){
+  .card{
+    font-size:20px;
+    padding:32px;
+  }
+}
 
 
